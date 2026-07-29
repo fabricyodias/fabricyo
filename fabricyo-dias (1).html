@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fabricyo Dias — Estratégia de narrativa e presença</title>
+<meta name="description" content="Ajudo especialistas e marcas pessoais a transformar conhecimento em uma presença autêntica, estratégica e memorável. Posicionamento, narrativa e sistema de conteúdo.">
+<meta name="author" content="Fabricyo Dias">
+<meta name="theme-color" content="#2A231F">
+<link rel="canonical" href="https://fabricyodias.com/">
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Fabricyo Dias">
+<meta property="og:title" content="Fabricyo Dias — Estratégia de narrativa e presença">
+<meta property="og:description" content="Sua marca não precisa produzir mais conteúdo. Ela precisa ser lembrada.">
+<meta property="og:url" content="https://fabricyodias.com/">
+<meta property="og:image" content="https://fabricyodias.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fabricyo Dias — Estratégia de narrativa e presença">
+<meta name="twitter:description" content="Sua marca não precisa produzir mais conteúdo. Ela precisa ser lembrada.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232A231F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23FEF0CD' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Jost:ital,wght@0,300..600;1,300..600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS — cores extraídas da identidade visual (@diasfabricyo)
+   ============================================================ */
+:root{
+  --espresso:#2A231F;      /* marrom quase preto dos posts       */
+  --espresso-2:#3A322D;
+  --paper:#F1ECE8;         /* papel texturizado claro            */
+  --paper-2:#E4DCD3;       /* papel em tom taupe (alternância)   */
+  --cream:#FEF0CD;         /* creme quente — destaque assinatura */
+  --mauve:#766063;         /* faixa ameixa acinzentada           */
+  --taupe:#B8A07E;
+  --olive:#BAAA6F;         /* dourado envelhecido                */
+  --muted:#6B5F58;
+  --line:rgba(42,35,31,.16);
+  --line-lt:rgba(254,240,205,.18);
+  --pad:clamp(1.25rem,5vw,6.5rem);
+  --gap:clamp(3.5rem,9vw,8rem);
+  --serif:"Playfair Display","Iowan Old Style",Georgia,serif;
+  --sans:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;background:var(--paper);color:var(--espresso);
+  font-family:var(--sans);font-weight:400;
+  font-size:clamp(1rem,.55vw + .9rem,1.0625rem);line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+/* grão de papel — mesma textura dos posts */
+body::after{
+  content:"";position:fixed;inset:0;z-index:9;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+h1,h2,h3,.disp{
+  font-family:var(--serif);font-weight:400;
+  letter-spacing:-.02em;line-height:1.04;margin:0;
+}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+a{color:inherit}
+img,svg{max-width:100%}
+:focus-visible{outline:2px solid var(--olive);outline-offset:3px;border-radius:2px}
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:60;background:var(--cream);color:var(--espresso);
+  padding:.75rem 1.25rem;font-size:.875rem;
+}
+.skip:focus{left:1rem;top:1rem}
+
+/* ---------- primitivas ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);position:relative;z-index:2}
+section[id]{scroll-margin-top:74px}
+.sec{padding-top:var(--gap);padding-bottom:var(--gap)}
+.bg-ink{background:var(--espresso);color:var(--paper)}
+.bg-taupe{background:var(--paper-2)}
+.bg-mauve{background:var(--mauve);color:var(--cream)}
+.eyebrow{
+  font-family:var(--sans);font-size:.6875rem;text-transform:uppercase;letter-spacing:.24em;
+  font-weight:500;color:var(--muted);margin:0 0 1.6rem;
+}
+.bg-ink .eyebrow{color:var(--olive)}
+.bg-mauve .eyebrow{color:rgba(254,240,205,.72)}
+.lede{font-size:clamp(1.05rem,.6vw + .95rem,1.2rem);color:var(--muted);max-width:46ch;font-weight:300}
+.bg-ink .lede{color:#C9BBAE}
+.bg-mauve .lede{color:rgba(254,240,205,.82)}
+
+/* ---------- marca ---------- */
+.lockup{display:inline-block;text-decoration:none;line-height:1}
+.lockup .name{
+  font-family:"Bevan",Georgia,serif;font-weight:400;font-size:.98rem;
+  letter-spacing:.055em;text-transform:uppercase;display:block;
+}
+.lockup .sub{
+  display:block;font-family:var(--sans);font-size:.5rem;font-weight:400;
+  letter-spacing:.42em;text-transform:uppercase;opacity:.68;margin-top:.32em;
+  padding-left:.1em;
+}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:30;background:var(--espresso);color:var(--cream);
+  border-bottom:1px solid var(--line-lt);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;min-height:66px}
+.nav{display:flex;align-items:center;gap:1.75rem}
+.nav a{
+  font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;font-weight:400;
+  text-decoration:none;color:rgba(254,240,205,.78);white-space:nowrap;
+  transition:color .2s ease;
+}
+.nav a:hover{color:var(--cream)}
+.nav-cta{
+  font-size:.78rem!important;text-transform:uppercase;letter-spacing:.14em;
+  border:1px solid rgba(254,240,205,.4);padding:.62em 1.15em;color:var(--cream)!important;
+  transition:background .25s ease,border-color .25s ease;
+}
+.nav-cta:hover{background:var(--cream);color:var(--espresso)!important;border-color:var(--cream)}
+@media(max-width:720px){.nav .hide-sm{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(3.5rem,10vh,7rem);padding-bottom:clamp(3rem,8vh,6rem)}
+.hero h1{font-size:clamp(2.4rem,7.2vw,5.3rem);max-width:21ch}
+.hero h1 em{
+  display:block;font-style:italic;color:var(--cream);font-weight:500;
+}
+.hero .lede{margin:clamp(1.75rem,4vw,2.5rem) 0 2.5rem}
+.actions{display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center}
+.cta{
+  display:inline-flex;align-items:center;gap:.6em;text-decoration:none;
+  font-size:.9rem;font-weight:500;letter-spacing:.02em;
+  padding:.9em 1.7em;background:var(--cream);color:var(--espresso);
+  border:1px solid var(--cream);
+  transition:transform .25s ease,background .25s ease,color .25s ease;
+}
+.cta:hover{transform:translateY(-2px);background:var(--olive);border-color:var(--olive)}
+.cta svg{width:1.05em;height:1.05em;flex:0 0 auto}
+.cta-line{
+  display:inline-block;text-decoration:none;font-weight:400;font-size:.9rem;
+  letter-spacing:.02em;border-bottom:1px solid currentColor;padding-bottom:3px;
+}
+.bg-mauve .cta{background:var(--cream);border-color:var(--cream)}
+.bg-mauve .cta:hover{background:var(--olive);border-color:var(--olive);color:var(--espresso)}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:clamp(2.75rem,8vh,5rem);
+  padding-top:1.25rem;border-top:1px solid var(--line-lt);
+  font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;color:rgba(254,240,205,.55);
+}
+
+/* ---------- manifesto (assinatura) ---------- */
+.manifesto-sec{padding-top:0;padding-bottom:calc(var(--gap) * .85)}
+.manifesto{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.35rem,3vw,2.25rem);line-height:1.4;letter-spacing:-.012em;
+  max-width:32ch;margin:0;
+}
+.w{transition:opacity .9s cubic-bezier(.4,0,.2,1)}
+.faded .w{opacity:.14}
+.faded .w.k{opacity:1;color:var(--cream)}
+.replay{
+  margin-top:2.25rem;background:none;border:0;padding:0;cursor:pointer;color:var(--olive);
+  font-family:var(--sans);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.7em;
+}
+.replay:hover{color:var(--cream)}
+.replay::before{content:"";width:24px;height:1px;background:currentColor}
+.replay[hidden]{display:none}
+
+/* ---------- problema ---------- */
+.split{display:grid;gap:clamp(2rem,5vw,4.5rem);grid-template-columns:1fr}
+@media(min-width:860px){.split{grid-template-columns:.85fr 1.15fr}}
+.split h2{font-size:clamp(1.85rem,3.6vw,2.85rem);max-width:16ch}
+.beats{margin:0;padding:0;list-style:none;max-width:44ch}
+.beats li{padding:.72rem 0;border-bottom:1px solid var(--line);font-size:1.02rem;font-weight:300}
+.beats li:first-child{padding-top:0}
+.beats li.strike{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
+.beats li.last{
+  border-bottom:0;padding-top:1.5rem;font-family:var(--serif);font-style:italic;
+  font-size:1.2rem;line-height:1.4;color:var(--mauve);
+}
+
+/* ---------- virada ---------- */
+.turn{padding-top:clamp(3.5rem,8vw,6rem);padding-bottom:clamp(3.5rem,8vw,6rem)}
+.turn h2{font-size:clamp(1.95rem,5vw,3.8rem);max-width:22ch}
+.turn h2 em{font-style:italic;font-weight:500;color:#FFF}
+
+/* ---------- método ---------- */
+.h-sec{font-size:clamp(1.8rem,3.4vw,2.6rem);max-width:22ch}
+.steps{display:grid;gap:1px;background:var(--line);margin-top:clamp(2.5rem,6vw,4rem)}
+@media(min-width:760px){.steps{grid-template-columns:1fr 1fr}}
+.step{background:var(--paper);padding:clamp(1.75rem,3.5vw,2.75rem)}
+.step .n{
+  font-family:var(--serif);font-size:2.5rem;line-height:1;color:var(--taupe);
+  display:block;margin-bottom:1rem;
+}
+.step h3{font-size:1.28rem;margin-bottom:.7rem;letter-spacing:-.01em;line-height:1.2}
+.step p{color:var(--muted);font-size:.92rem;font-weight:300;margin:0}
+
+/* ---------- história ---------- */
+.story{max-width:56ch}
+.story h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:2rem}
+.story p{color:#C9BBAE;font-weight:300}
+.story .pull{
+  font-family:var(--serif);font-weight:400;font-style:italic;
+  font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.25;color:var(--cream);
+  margin:2.25rem 0;padding-left:1.25rem;border-left:2px solid var(--olive);
+}
+
+/* ---------- entregáveis ---------- */
+.deliver{display:grid;gap:clamp(2rem,5vw,4rem);grid-template-columns:1fr}
+@media(min-width:860px){.deliver{grid-template-columns:.8fr 1.2fr}}
+.deliver h2{font-size:clamp(1.8rem,3.4vw,2.6rem);max-width:14ch}
+.items{margin:0;padding:0;list-style:none;columns:1}
+@media(min-width:520px){.items{columns:2;column-gap:2.5rem}}
+.items li{
+  padding:.68rem 0;border-bottom:1px solid var(--line);break-inside:avoid;
+  font-size:.94rem;font-weight:300;display:flex;gap:.8em;align-items:baseline;
+}
+.items li::before{
+  content:"";flex:0 0 auto;width:5px;height:5px;background:var(--mauve);
+  border-radius:50%;transform:translateY(-3px);
+}
+
+/* ---------- para quem ---------- */
+.fit{display:grid;gap:1px;background:var(--line);margin-top:clamp(2.5rem,6vw,4rem)}
+@media(min-width:760px){.fit{grid-template-columns:1fr 1fr}}
+.fit-col{background:var(--paper-2);padding:clamp(1.75rem,3.5vw,2.75rem)}
+.fit-col h3{font-size:1.12rem;margin-bottom:1.4rem;line-height:1.25}
+.fit-col ul{margin:0;padding:0;list-style:none;font-size:.94rem;font-weight:300}
+.fit-col li{padding:.5rem 0;color:var(--muted)}
+.fit-col.no li::before{content:"✕";margin-right:.7em;font-size:.72em;color:var(--muted)}
+.fit-col.yes{background:var(--espresso);color:var(--paper)}
+.fit-col.yes li{color:#C9BBAE}
+.fit-col.yes li::before{content:"→";margin-right:.7em;color:var(--olive)}
+
+/* ---------- depoimentos ---------- */
+.quotes{display:grid;gap:clamp(1.5rem,3vw,2.5rem);grid-template-columns:1fr;margin-top:3rem}
+@media(min-width:760px){.quotes{grid-template-columns:1fr 1fr}}
+.quote{border:1px solid var(--line);padding:clamp(1.5rem,3vw,2.25rem);position:relative;background:var(--paper)}
+.quote .tag{
+  position:absolute;top:-.62rem;left:1.25rem;background:var(--paper);padding:0 .55rem;
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.quote blockquote{
+  margin:0 0 1.25rem;font-family:var(--serif);font-size:1.18rem;line-height:1.45;
+}
+.quote cite{font-style:normal;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+
+/* ---------- contato ---------- */
+.final h2{font-size:clamp(2rem,5vw,3.6rem);max-width:24ch;margin-bottom:1.75rem}
+.channels{
+  display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-lt);
+  margin-top:clamp(2.5rem,6vw,3.75rem);
+}
+@media(min-width:640px){.channels{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.channels{grid-template-columns:repeat(5,1fr)}}
+.ch{
+  display:flex;flex-direction:column;gap:.55rem;text-decoration:none;color:var(--cream);
+  background:var(--mauve);padding:1.4rem 1.35rem 1.5rem;
+  transition:background .25s ease,color .25s ease;
+}
+.ch:hover,.ch:focus-visible{background:var(--cream);color:var(--espresso)}
+.ch .ic{width:20px;height:20px;margin-bottom:.35rem}
+.ch .ic svg{width:100%;height:100%;display:block;fill:currentColor}
+.ch .ic svg.stroke{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ch .k{font-size:.6rem;text-transform:uppercase;letter-spacing:.2em;opacity:.7}
+.ch .v{font-size:.94rem;font-weight:400;word-break:break-word;line-height:1.35}
+.ch .v.sm{font-size:.8rem;letter-spacing:.01em}
+
+/* ---------- footer ---------- */
+footer{background:var(--espresso);color:rgba(254,240,205,.55);font-size:.8rem;position:relative;z-index:2}
+.foot{
+  display:flex;flex-wrap:wrap;gap:1.5rem 2rem;justify-content:space-between;
+  align-items:flex-end;padding:2.75rem 0 2.25rem;
+}
+.foot .lockup{color:var(--cream)}
+.foot-links{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+.foot-links a{text-decoration:none;color:rgba(254,240,205,.7);letter-spacing:.06em}
+.foot-links a:hover{color:var(--cream)}
+.foot-legal{padding-bottom:2rem;font-size:.7rem;letter-spacing:.08em;opacity:.55}
+@media(max-width:640px){.foot-legal{padding-bottom:5.5rem}}
+
+/* ---------- barra fixa mobile ---------- */
+.dock{
+  position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;
+  background:var(--espresso);border-top:1px solid var(--line-lt);
+  padding:.7rem max(1rem,env(safe-area-inset-left)) calc(.7rem + env(safe-area-inset-bottom));
+}
+.dock a{
+  display:flex;align-items:center;justify-content:center;gap:.55em;
+  background:var(--cream);color:var(--espresso);text-decoration:none;
+  font-size:.9rem;font-weight:500;padding:.85em 1rem;letter-spacing:.02em;
+}
+.dock svg{width:1.1em;height:1.1em;fill:currentColor}
+@media(max-width:640px){.dock{display:block}}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="lockup" href="#top" aria-label="Fabricyo Dias — Criatividade, início">
+      <span class="name">Fabricyo Dias</span>
+      <span class="sub">Criatividade</span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="hide-sm" href="#metodo">Método</a>
+      <a class="hide-sm" href="#sobre">Sobre</a>
+      <a class="nav-cta" href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section class="bg-ink hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Estratégia de narrativa e presença</p>
+    <h1>Sua marca não precisa produzir mais conteúdo.<em>Ela precisa ser lembrada.</em></h1>
+    <p class="lede">Ajudo especialistas e marcas pessoais a transformar conhecimento em uma presença autêntica, estratégica e memorável.</p>
+    <div class="actions">
+      <a class="cta" href="https://wa.me/5511954900378?text=Oi%2C%20Fabricyo!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20a%20minha%20marca." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.35-.35.52-.52.17-.18.23-.3.35-.5.11-.2.05-.37-.06-.52-.12-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.22-3.74.99 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.23-6.16-3.48-8.41z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a class="cta-line" href="#metodo">Ver como funciona</a>
+    </div>
+    <div class="hero-meta">
+      <span>Posicionamento</span><span>Narrativa</span><span>Sistema de conteúdo</span><span>Consultoria</span>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO — elemento assinatura -->
+<section class="bg-ink manifesto-sec">
+  <div class="wrap">
+    <p class="eyebrow">O que fica</p>
+    <p class="manifesto" id="manifesto">
+      <span class="w">A</span> <span class="w">internet</span> <span class="w">nos</span> <span class="w">convenceu</span> <span class="w">de</span> <span class="w">que</span> <span class="w">criar</span> <span class="w">conteúdo</span> <span class="w">é</span> <span class="w">publicar</span> <span class="w">todos</span> <span class="w">os</span> <span class="w">dias,</span> <span class="w">aparecer</span> <span class="w">sempre,</span> <span class="w">correr</span> <span class="w">atrás</span> <span class="w">de</span> <span class="w">cada</span> <span class="w">tendência</span> <span class="w">e</span> <span class="w">nunca</span> <span class="w">ficar</span> <span class="w">em</span> <span class="w">silêncio.</span> <span class="w">Eu</span> <span class="w">acredito</span> <span class="w">no</span> <span class="w">contrário.</span>
+      <span class="w k">Criar</span> <span class="w k">conteúdo</span> <span class="w k">é</span> <span class="w">parar</span> <span class="w">de</span> <span class="w">disputar</span> <span class="w">atenção</span> <span class="w">e</span> <span class="w k">construir</span> <span class="w k">uma</span> <span class="w k">ideia</span> <span class="w">tão</span> <span class="w">clara</span> <span class="w k">que</span> <span class="w">ela</span> <span class="w k">continua</span> <span class="w k">viva</span> <span class="w">na</span> <span class="w">cabeça</span> <span class="w">de</span> <span class="w">alguém</span> <span class="w">muito</span> <span class="w k">depois</span> <span class="w k">do</span> <span class="w k">aplicativo</span> <span class="w">ser</span> <span class="w k">fechado.</span>
+    </p>
+    <button class="replay" id="replay" hidden>Ler tudo de novo</button>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="bg-taupe sec">
+  <div class="wrap split">
+    <h2>Você sabe muito. E, mesmo assim, não publica.</h2>
+    <ul class="beats">
+      <li>Abre o Instagram e parece que tudo o que você poderia dizer já foi dito.</li>
+      <li>Salva ideias.</li>
+      <li>Escreve roteiros.</li>
+      <li class="strike">Apaga.</li>
+      <li>Recomeça.</li>
+      <li>Publica só quando sente que ficou perfeito — ou seja, quase nunca.</li>
+      <li class="last">Enquanto isso, pessoas menos preparadas ocupam o espaço simplesmente porque conseguem aparecer.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- VIRADA -->
+<section class="bg-mauve turn">
+  <div class="wrap">
+    <p class="eyebrow">A mudança</p>
+    <h2>Conteúdo não começa na câmera. <em>Começa na clareza.</em></h2>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="sec" id="metodo">
+  <div class="wrap">
+    <p class="eyebrow">Como trabalhamos</p>
+    <h2 class="h-sec">Um processo, não um pacote de posts.</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <h3>Descobrimos sua narrativa</h3>
+        <p>Antes de qualquer roteiro: o que só você pode dizer, e por quê. Diagnóstico da sua história, do seu repertório e do que já existe hoje.</p>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <h3>Transformamos conhecimento em posicionamento</h3>
+        <p>O que você sabe passa a ter um lugar claro na cabeça de quem te acompanha. Uma ideia central, defensável, sua.</p>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <h3>Criamos um sistema de conteúdo</h3>
+        <p>Pilares editoriais, formatos, ritmo possível e roteiros. Um sistema que funciona nas semanas em que você não está inspirado.</p>
+      </div>
+      <div class="step">
+        <span class="n">4</span>
+        <h3>Construímos uma marca que cresce sem perder autenticidade</h3>
+        <p>Ajuste contínuo, leitura de resultados e evolução da narrativa conforme sua autoridade cresce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE EU -->
+<section class="bg-ink sec" id="sobre">
+  <div class="wrap story">
+    <p class="eyebrow">Por que eu</p>
+    <h2>Passei anos construindo a voz de outras pessoas.</h2>
+    <p>Durante muito tempo produzi conteúdo para marcas e para outras pessoas enquanto tentava descobrir como construir a minha própria voz. Estudei marketing, audiovisual, storytelling e comportamento humano procurando uma resposta técnica.</p>
+    <p class="pull">A resposta não era criatividade. Era clareza.</p>
+    <p>Quem trava na frente da câmera quase nunca está sem ideias — está sem uma ideia central que organize todas as outras. É esse trabalho que eu faço: encontrar essa ideia com você e construir uma presença em cima dela.</p>
+  </div>
+</section>
+
+<!-- ENTREGÁVEIS -->
+<section class="bg-taupe sec">
+  <div class="wrap deliver">
+    <h2>O que você recebe</h2>
+    <ul class="items">
+      <li>Diagnóstico de posicionamento</li>
+      <li>Narrativa da marca</li>
+      <li>Estratégia de conteúdo</li>
+      <li>Pilares editoriais</li>
+      <li>Calendário estratégico</li>
+      <li>Roteiros</li>
+      <li>Consultoria e acompanhamento</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="bg-taupe" style="padding-bottom:var(--gap)">
+  <div class="wrap">
+    <div class="fit">
+      <div class="fit-col no">
+        <h3>Não é para quem procura</h3>
+        <ul>
+          <li>Fórmulas prontas</li>
+          <li>Conteúdo genérico</li>
+          <li>Crescimento rápido a qualquer custo</li>
+          <li>Copiar tendências</li>
+        </ul>
+      </div>
+      <div class="fit-col yes">
+        <h3>É para especialistas que já têm repertório</h3>
+        <ul>
+          <li>Psicólogos, médicos e advogados</li>
+          <li>Consultores e professores</li>
+          <li>Empresários e fundadores</li>
+          <li>Quem quer uma marca que continue fazendo sentido daqui a cinco anos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Quem já passou por esse processo</p>
+    <h2 class="h-sec">O que muda depois da clareza.</h2>
+    <div class="quotes">
+      <div class="quote">
+        <span class="tag">Exemplo · substituir</span>
+        <blockquote>Eu tinha material para dez anos de conteúdo e não conseguia gravar um vídeo. Hoje sei exatamente qual conversa eu quero puxar.</blockquote>
+        <cite>Nome — Psicóloga, São Paulo</cite>
+      </div>
+      <div class="quote">
+        <span class="tag">Exemplo · substituir</span>
+        <blockquote>Paramos de perseguir tendência. Em três meses meus clientes passaram a chegar já sabendo do que eu falo.</blockquote>
+        <cite>Nome — Consultor financeiro</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="bg-ink sec final" id="contato">
+  <div class="wrap">
+    <p class="eyebrow">Próximo passo</p>
+    <h2>Vamos construir uma estratégia que faça sentido para a sua marca?</h2>
+    <p class="lede">Uma conversa de 30 minutos, sem compromisso. Você me conta onde travou e eu te digo o que faria no seu lugar.</p>
+    <div class="actions" style="margin-top:2.25rem">
+      <a class="cta" href="https://wa.me/5511954900378?text=Oi%2C%20Fabricyo!%20Quero%20marcar%20uma%20conversa%20de%2030%20minutos." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.35-.35.52-.52.17-.18.23-.3.35-.5.11-.2.05-.37-.06-.52-.12-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.22-3.74.99 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.23-6.16-3.48-8.41z"/></svg>
+        Marcar uma conversa
+      </a>
+      <a class="cta-line" href="mailto:contato.fabricyodias@gmail.com">contato.fabricyodias@gmail.com</a>
+    </div>
+
+    <div class="channels">
+      <a class="ch" href="https://wa.me/5511954900378" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.35-.35.52-.52.17-.18.23-.3.35-.5.11-.2.05-.37-.06-.52-.12-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.22-3.74.99 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.23-6.16-3.48-8.41z"/></svg></span>
+        <span class="k">WhatsApp</span>
+        <span class="v">(11) 95490-0378</span>
+      </a>
+      <a class="ch" href="https://instagram.com/diasfabricyo" target="_blank" rel="noopener">
+        <span class="ic"><svg class="stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><path d="M17.2 6.9h.01"/></svg></span>
+        <span class="k">Instagram</span>
+        <span class="v">@diasfabricyo</span>
+      </a>
+      <a class="ch" href="https://www.tiktok.com/@diasfabricyo" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
+        <span class="k">TikTok</span>
+        <span class="v">@diasfabricyo</span>
+      </a>
+      <a class="ch" href="https://www.linkedin.com/in/fabricyo-dias" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.86-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 0 1-2.07-2.06 2.06 2.06 0 1 1 2.07 2.06zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
+        <span class="k">LinkedIn</span>
+        <span class="v">/in/fabricyo-dias</span>
+      </a>
+      <a class="ch" href="mailto:contato.fabricyodias@gmail.com">
+        <span class="ic"><svg class="stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.2 6.2 12 12.8l8.8-6.6"/></svg></span>
+        <span class="k">E-mail</span>
+        <span class="v sm">contato.fabricyodias@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="lockup" href="#top" aria-label="Fabricyo Dias — Criatividade, voltar ao topo">
+      <span class="name">Fabricyo Dias</span>
+      <span class="sub">Criatividade</span>
+    </a>
+    <div class="foot-links">
+      <a href="https://instagram.com/diasfabricyo" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@diasfabricyo" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.linkedin.com/in/fabricyo-dias" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/5511954900378" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contato.fabricyodias@gmail.com">E-mail</a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>Estratégia de narrativa e presença · São Paulo, Brasil · © <span id="ano">2026</span> Fabricyo Dias</span>
+  </div>
+</footer>
+
+<!-- barra fixa no mobile -->
+<div class="dock">
+  <a href="https://wa.me/5511954900378?text=Oi%2C%20Fabricyo!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20a%20minha%20marca." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.35-.35.52-.52.17-.18.23-.3.35-.5.11-.2.05-.37-.06-.52-.12-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.09 3.2 5.07 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.22-3.74.99 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.23-6.16-3.48-8.41z"/></svg>
+    Falar no WhatsApp
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Fabricyo Dias",
+  "jobTitle":"Estrategista de narrativa e presença",
+  "description":"Ajudo especialistas e marcas pessoais a transformar conhecimento em uma presença autêntica, estratégica e memorável.",
+  "email":"contato.fabricyodias@gmail.com",
+  "telephone":"+5511954900378",
+  "address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},
+  "sameAs":[
+    "https://instagram.com/diasfabricyo",
+    "https://www.tiktok.com/@diasfabricyo",
+    "https://www.linkedin.com/in/fabricyo-dias"
+  ],
+  "knowsAbout":["Posicionamento de marca","Storytelling","Estratégia de conteúdo","Marca pessoal"]
+}
+</script>
+
+<script>
+(function(){
+  var y = document.getElementById('ano');
+  if(y) y.textContent = new Date().getFullYear();
+
+  var m = document.getElementById('manifesto');
+  var btn = document.getElementById('replay');
+  if(!m || !btn) return;
+  var words = m.querySelectorAll('.w');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function stagger(){
+    var i = 0;
+    words.forEach(function(w){
+      if(w.classList.contains('k')){ w.style.transitionDelay = '0ms'; return; }
+      w.style.transitionDelay = reduce ? '0ms' : (i * 22) + 'ms';
+      i++;
+    });
+  }
+  function fade(){ stagger(); m.classList.add('faded'); btn.hidden = false; }
+  function reset(){ m.classList.remove('faded'); btn.hidden = true; }
+
+  btn.addEventListener('click', reset);
+
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          setTimeout(fade, reduce ? 0 : 900);
+          io.disconnect();
+        }
+      });
+    },{threshold:.55});
+    io.observe(m);
+  } else { fade(); }
+})();
+</script>
+</body>
+</html>
